@@ -1,5 +1,4 @@
 # Cian's Custom Bash README
----
 
 ###### Making a script executable and running it globally
 
