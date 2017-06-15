@@ -1,0 +1,4 @@
+#!/bin/bash
+# This will copy a file and appen the date and time to the file name
+date_formatted=$(date +%m_%d_%y-%H-%M-%S)
+cp -iv $1 $2.$date_formatted
