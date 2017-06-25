@@ -22,6 +22,22 @@ Placing the script in the `~/bin` folder will allow your script to be run global
 
 Running `which [command]` will tell you where the command lives and who it belongs to.
 
+`rsync`
+> Stands for remotre sync. Is a remote and local fine synchronization tool.
+
+<dl>
+  <dt>Usage</dt>
+  <dd>
+    `rsync -r dir1/ dir2`
+  </dd>
+  <dd>
+    `rsync -a dir1/ dir2`
+  </dd>
+  <dd>
+    `rsync -a ~/dir1 username@remote_host:destination_dir`
+  </dd>
+</dl>
+
 ---
 
 ### Scripts in this repo
