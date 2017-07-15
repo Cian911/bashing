@@ -9,22 +9,24 @@ read serveralias
 echo "Enter your DocumentRoot:"
 read documentroot
 
-new_content="
-<VirtualHost *:80>
-	ServerName $servername
-	ServerAlias $serveralias
-	ServerAdmin webmaster@localhost
-	DocumentRoot $documentroot
-</VirtualHost>
-"
-
-
 new_file="/etc/apache2/sites-enabled/$confname.conf"
 # Create file
 touch $new_file
 # Assign correct permissions
 chmod 777 $new_file
 
-# Copy content of var to new .conf file
-echo $new_content > $newfile
-echo "File created: $newfile"
+# Copy content to new .conf file
+cat > $new_file << EOF
+<VirtualHost *:80>
+	ServerName $servername
+	ServerAlias $serveralias
+	ServerAdmin webmaster@localhost
+	DocumentRoot $documentroot
+</VirtualHost>
+EOF
+
+# Enable new virtual host file
+a2ensite $new_file
+
+# Restart apache
+systemctl restart apache2
