@@ -1,0 +1,30 @@
+#!/bin/bash
+
+echo "Enter the name you want to call your .conf file:"
+read confname
+echo "Enter your ServerName:"
+read servername
+echo "Enter your ServerAlias:"
+read serveralias
+echo "Enter your DocumentRoot:"
+read documentroot
+
+new_content="
+<VirtualHost *:80>
+	ServerName $servername
+	ServerAlias $serveralias
+	ServerAdmin webmaster@localhost
+	DocumentRoot $documentroot
+</VirtualHost>
+"
+
+
+new_file="/etc/apache2/sites-enabled/$confname.conf"
+# Create file
+touch $new_file
+# Assign correct permissions
+chmod 777 $new_file
+
+# Copy content of var to new .conf file
+echo $new_content > $newfile
+echo "File created: $newfile"
