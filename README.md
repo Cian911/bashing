@@ -43,3 +43,4 @@ Running `which [command]` will tell you where the command lives and who it belon
 ### Scripts in this repo
 
 `datecp` will copy a file and append the current date to the filename
+`autodev` automates the process of setting up a local dev server in apache on linux machines
