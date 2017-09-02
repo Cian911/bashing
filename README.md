@@ -38,6 +38,9 @@ Running `which [command]` will tell you where the command lives and who it belon
   </dd>
 </dl>
 
+`gpasswd -a demo sudo`
+> Add the user `demo` to the sudo user group to have admin privledges. This must be performed as a `root` user.
+
 ---
 
 ### Scripts in this repo
