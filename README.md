@@ -38,8 +38,14 @@ Running `which [command]` will tell you where the command lives and who it belon
   </dd>
 </dl>
 
+`rsync -chavzP --stats user@server.com:~/file ~/file_local`
+> Send file from remote server to local file system
+
 `gpasswd -a demo sudo`
 > Add the user `demo` to the sudo user group to have admin privledges. This must be performed as a `root` user.
+
+`pkill -USR1 puma-dev`
+> Sends signal to restart puma-dev instance running
 
 ---
 
