@@ -47,6 +47,9 @@ Running `which [command]` will tell you where the command lives and who it belon
 `pkill -USR1 puma-dev`
 > Sends signal to restart puma-dev instance running
 
+`gzip -d file.gz`
+> Unzip a zipped file
+
 ---
 
 ### Scripts in this repo
