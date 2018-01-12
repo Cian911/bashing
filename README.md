@@ -16,6 +16,10 @@ To run the script, cd to the appropriate directory and run like so.
 
 Placing the script in the `~/bin` folder will allow your script to be run globally.
 
+`.powenv`
+
+Used in cases where `puma-dev` is giving issues. See here for similar issues around `puma-dev` and `rvm`: puma/puma-dev#62
+
 ---
 
 ###### Other commands
